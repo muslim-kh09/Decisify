@@ -324,7 +324,7 @@ export default function App() {
                 <thead>
                   <tr className="bg-[#0f0f0f]">
                     <th className="min-w-[120px] sticky left-0 z-20 bg-[#0f0f0f] border-r border-[var(--border)]"></th>
-                    {criteria.map((c, i) => (
+                    {criteria.map(c => (
                       <th key={c.id} className="text-center min-w-[100px] px-2 py-4">
                         <div className="text-white mb-1 truncate max-w-[120px] mx-auto" title={c.name}>{c.name}</div>
                         <div className="text-[10px] text-[#e0ff22]">WEIGHT: {c.weight}</div>
@@ -333,12 +333,12 @@ export default function App() {
                   </tr>
                 </thead>
                 <tbody>
-                  {options.map((o, i) => (
+                  {options.map(o => (
                     <tr key={o.id} className="transition-colors hover:bg-white/[0.02]">
                       <td className="font-semibold text-white/90 sticky left-0 z-20 bg-[var(--bg)] border-r border-[var(--border)] truncate max-w-[120px]" title={o.name}>
                         {o.name}
                       </td>
-                      {criteria.map((c, j) => {
+                      {criteria.map(c => {
                         const val = scores[`${o.id}_${c.id}`] || '';
                         return (
                           <td key={c.id} className="text-center px-2">
@@ -416,7 +416,7 @@ export default function App() {
 
           <div className="grid grid-cols-1 gap-4 md:gap-6">
             <AnimatePresence mode="popLayout">
-              {results.filter(r => r.total > 0).map((r, i) => {
+              {results.filter(r => r.total > 0).map(r => {
                 const isWinner = r.total === maxTotal && maxTotal > 0 && r.complete;
                 if (!isWinner) return null; // Only show winner card to save space, or show all if needed. 
                 // Given the chart handles the breakdown, let's just feature the winner prominently.
