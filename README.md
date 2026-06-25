@@ -1,5 +1,7 @@
 # Decisify
 
+🚀 **Live Demo:** [https://decisify-web.vercel.app](https://decisify-web.vercel.app)
+
 A premium, client-side Weighted Decision Matrix tool built to help users make complex mathematical choices with high precision. Decisify features a striking "Dark Tech / Minimalist" aesthetic, fluid motion, bilingual support (English/Arabic), and local persistence.
 
 ## Features
